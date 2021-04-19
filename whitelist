@@ -1,0 +1,12 @@
+
+local key = _G.key
+-- Obfuscate this part:
+local whitelistcheck = loadstring(game:HttpGet("https://raw.githubusercontent.com/MAZIHUB191/whitelist.lua/main/Create%20Key", true))()
+
+if whitelistcheck[key] then
+    print("Whitelisted!")
+    
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MAZIHUB191/Arsenal-OPEN-/main/BuyNoOpen", true))()
+else 
+    game:GetService("Players").LocalPlayer:Kick("ข้อความตอนโดนเตะ")
+end
